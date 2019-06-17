@@ -67,10 +67,10 @@ namespace ExampleProxyApi
             	{
             		using ( var httpClient = new HttpClient() )
             		{
-            			var response = await httpClient.GetAsync( "http://api.openweathermap.org/data/2.5/weather" + pathAndQuery.Replace( apiEndpoint, "" ) + "&appid=fcadd28326c90c3262054e0e6ca599cd" );
+            			var response = await httpClient.GetAsync( "http://api.openweathermap.org/data/2.5/weather" + pathAndQuery.Replace( apiEndpoint, "" ) + "&appid=hereisyourkey" );
             			var result1 = await response.Content.ReadAsStringAsync();
 
-            			var response1 = await httpClient.GetAsync( "http://api.openweathermap.org/data/2.5/forecast" + pathAndQuery.Replace( apiEndpoint, "" ) + "&appid=fcadd28326c90c3262054e0e6ca599cd" );
+            			var response1 = await httpClient.GetAsync( "http://api.openweathermap.org/data/2.5/forecast" + pathAndQuery.Replace( apiEndpoint, "" ) + "&appid=hereisyourkey" );
                         var result2 = await response1.Content.ReadAsStringAsync();
 
                         var combinedResult = "[" + result1 + "," + result2 + "]";

@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  background: linear-gradient(to top right, rgba($green, 0.5), rgba($yellow, 0.5), rgba($peach, 0.5));
+  font-family: Avenir, serif;
+}
+
+table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 0 4px;
+  height: 44px;
+  border-bottom: 1px solid $light;
+  text-align: end;
+  &:first-child {
+    text-align: start;
+  }
+}
+th {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  color: $green;
+  @media (max-width: 767px) {
+    font-size: 10px;
+  }
+}
+td {
+  font-size: 14px;
+  color: #5E6063;
+  @media (max-width: 767px) {
+    font-size: 12px;
+  }
+}
+
+input {
+  width: 50%;
+  outline: 0;
+  color: $dark;
+  border: 1px solid $yellow;
+  border-radius: 22px;
+  padding: 10px;
+  font-size: 14px;
+  background: $yellow;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  padding: 11px 5px;
+  font-weight: 500;
+  width: 100px;
+  height: 40px;
+  border-radius: 22px;
+  color: $white;
+  font-size: 12px;
+  text-transform: uppercase;
+  opacity: .8;
+  &__main {
+    background-color: $green;
+  }
+  &__danger {
+    background-color: $peach;
+  }
+}
+.button:hover {
+  opacity: 1;
+}
+
+.card {
+  width: 400px;
+  height: 300px;
+  background: rgba($white, .4);
+  border-radius: 10px;
+  margin: 10px;
+  padding: 0 10px;
+  &__title {
+    color: $peach;
+    text-transform: capitalize;
+  }
+}
+
+.alert-warning {
+  background-color: $peach;
+}
+
+.alert-confirm {
+  background-color: $green;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+.mt-20 {
+  margin-top: 20px;
+}
